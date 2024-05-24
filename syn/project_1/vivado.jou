@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Dec 28 16:24:01 2018
+# Process ID: 7996
+# Current directory: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11668 C:\Users\yangxia\Desktop\XY\Projects\UHCL2017-2018\soc_datapath\soc_scalable\syn\project_1\project_1.xpr
+# Log file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1/vivado.log
+# Journal file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1/project_1.runs/impl_1/datapath.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]

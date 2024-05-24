@@ -1,0 +1,78 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Nov 27 12:10:46 2018
+| Host         : D111-D45876 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file datapath_control_sets_placed.rpt
+| Design       : datapath
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    71 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              44 |           24 |
+| No           | No                    | Yes                    |              12 |            6 |
+| No           | Yes                   | No                     |              27 |           14 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             165 |           39 |
+| Yes          | Yes                   | No                     |              17 |            5 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+|             Clock Signal             |                Enable Signal               |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++--------------------------------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+|  clk_wiz_0_clk_wiz/inst/ov7670_clk50 |                                            | u_ov7670_controller/u_i2c/sioc_i_1_n_0 |                1 |              1 |
+|  clk_wiz_0_clk_wiz/inst/ov7670_clk50 |                                            | reg_conf_rst_IBUF                      |                2 |              2 |
+|  clk_wiz_0_clk_wiz/inst/ov7670_clk50 | u_ov7670_controller/u_i2c/cnt_reg[7]_0[31] | reg_conf_rst_IBUF                      |                2 |              8 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    |                                            | vga_rst_IBUF                           |                4 |             10 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    | u_vga/vcnt0                                | vga_rst_IBUF                           |                4 |             10 |
+|  clk_wiz_0_clk_wiz/inst/ov7670_clk50 | u_ov7670_controller/u_i2c/E[0]             | reg_conf_rst_IBUF                      |                5 |             16 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    | u_vga/vga_addr10                           | vga_rst_IBUF                           |                4 |             17 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    | u_vga/vga_addr20                           | vga_rst_IBUF                           |                4 |             17 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    | u_vga/vga_addr30                           | vga_rst_IBUF                           |                4 |             17 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    | u_vga/vga_addr0[16]_i_1_n_0                | vga_rst_IBUF                           |                5 |             17 |
+|  cap_pclk_IBUF_BUFG                  | u_image_capture/cap_we                     | cap_vsync_IBUF                         |                5 |             17 |
+|  cap_pclk_IBUF_BUFG                  |                                            | cap_vsync_IBUF                         |               13 |             26 |
+|  clk_wiz_0_clk_wiz/inst/vga_clk25    |                                            |                                        |               24 |             44 |
+|  clk_wiz_0_clk_wiz/inst/ov7670_clk50 | u_ov7670_controller/u_i2c/data_sr_0        | reg_conf_rst_IBUF                      |               11 |             63 |
++--------------------------------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 2      |                     1 |
+| 8      |                     1 |
+| 10     |                     2 |
+| 16+    |                     9 |
++--------+-----------------------+
+
+

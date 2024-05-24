@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Nov 26 14:27:05 2018
+# Process ID: 5956
+# Current directory: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/blk_mem_gen_1_synth_1
+# Command line: vivado.exe -log blk_mem_gen_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_1.tcl
+# Log file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/blk_mem_gen_1_synth_1/blk_mem_gen_1.vds
+# Journal file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/blk_mem_gen_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_gen_1.tcl -notrace

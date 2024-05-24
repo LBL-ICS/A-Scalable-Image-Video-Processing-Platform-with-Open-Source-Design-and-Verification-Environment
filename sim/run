@@ -1,0 +1,136 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog +define+SIMULATION\
+     +define+DEBUG_CAP\
+     +define+DEBUG_I2C\
+     +define+DEBUG_VGA\
+     +define+DEBUG_I2C\
+     +define+DEBUG_CAP\
+     +define+DEBUG_VGA\
+     -f ../filelist/filelist.f
+     #+define+DEBUG_CAP\
+     #+define+DEBUG_I2C\
+     #+define+DEBUG_VGA\
+    
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.tb_datapath -t 1ns
+
+###################################### mus  ####################################
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/clk_100            
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/ov7670_clk50            
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/vga_clk25               
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/cap_pclk                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/reg_conf_rst            
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vga_rst            
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/ov7670_xclk             
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/ov7670_rst              
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/reg_conf_finish         
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/sioc                    
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/siod                    
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/ov7670_rst              
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/pwdn                    
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/ov7670_xclk             
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/cap_vsync               
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/cap_href                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vcnt                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/hcnt                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/cap_d                   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vga_red                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vga_green               
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vga_blue                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vga_hsync               
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/vga_vsync              
+#add wave -noupdate -format logic -radix hexadecimal tb_datapath/check_result              
+
+add wave -noupdate -format logic -radix hexadecimal -color purple tb_datapath/vga_red                 
+add wave -noupdate -format logic -radix hexadecimal -color purple tb_datapath/vga_green               
+add wave -noupdate -format logic -radix hexadecimal -color purple tb_datapath/vga_blue                
+add wave -noupdate -format logic -radix hexadecimal -color blue   tb_datapath/golden_red               
+add wave -noupdate -format logic -radix hexadecimal -color blue   tb_datapath/golden_grn               
+add wave -noupdate -format logic -radix hexadecimal -color blue   tb_datapath/golden_blu               
+
+add wave -noupdate -format logic -radix hexadecimal -color purple tb_datapath/u_datapath/u_ov7670_controller/u_i2c/token                 
+
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_clk25                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_rst                  
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_data                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_red                  
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_green                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_blue                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_hsync                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_vsync                
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr0                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr1                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr2                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr3                 
+add wave -noupdate -format logic -radix unsigned tb_datapath/u_datapath/u_vga/vcnt                 
+add wave -noupdate -format logic -radix unsigned tb_datapath/u_datapath/u_vga/hcnt                 
+add wave -noupdate -format logic -radix unsigned tb_datapath/check_vga                 
+#add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/blank                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/region                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr0                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr1                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr2                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_addr3                 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_vga/vga_data                 
+
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/pclk   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/vsync   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/href
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/d   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/addr   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/dout   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/we   
+
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/clk_a   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/clk_b   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/wdata   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/raddr   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/waddr   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/wr   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u0_ram_320x240/rdata   
+
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_ov7670_controller/u_reg/command   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_ov7670_controller/u_reg/cnt   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_ov7670_controller/u_reg/reg_conf_rst   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/golden_cmd   
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/rcv_cmd
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/sioc 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/siod 
+add wave -noupdate -format logic -radix unsigned tb_datapath/icnt 
+add wave -noupdate -format logic -radix unsigned tb_datapath/cmd1_flg 
+add wave -noupdate -format logic -radix unsigned tb_datapath/cmd2_flg 
+add wave -noupdate -format logic -radix unsigned tb_datapath/cmd3_flg 
+ 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/cap_pclk 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/cap_vsync 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/we 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/addr 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/u_datapath/u_image_capture/dout 
+add wave -noupdate -format logic -radix hexadecimal tb_datapath/golden_rgb
+#run 10ms
+run 50ms

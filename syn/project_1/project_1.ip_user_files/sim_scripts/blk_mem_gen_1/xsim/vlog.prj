@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../../../../../../../../../../../Zynq_Book/ip_repo/blk_mem_gen_1/sim/blk_mem_gen_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Dec 28 16:24:01 2018
+# Process ID: 7996
+# Current directory: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11668 C:\Users\yangxia\Desktop\XY\Projects\UHCL2017-2018\soc_datapath\soc_scalable\syn\project_1\project_1.xpr
+# Log file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1/vivado.log
+# Journal file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1/project_1.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1'
+INFO: [Project 1-313] Project file moved from 'C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 793.516 ; gain = 84.898
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274675389A
+set_property PROGRAM.FILE {C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn/project_1/project_1.runs/impl_1/datapath.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 28 16:25:09 2018...

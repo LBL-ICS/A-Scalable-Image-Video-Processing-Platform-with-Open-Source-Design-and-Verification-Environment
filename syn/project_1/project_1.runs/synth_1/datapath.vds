@@ -1,0 +1,440 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Nov 27 12:08:58 2018
+# Process ID: 15020
+# Current directory: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source datapath.tcl
+# Log file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/datapath.vds
+# Journal file: C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source datapath.tcl -notrace
+Command: synth_design -top datapath -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7112 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 376.156 ; gain = 104.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'datapath' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/datapath.v:2]
+	Parameter DATASIZE bound to: 12 - type: integer 
+	Parameter ADDRSIZE bound to: 16 - type: integer 
+	Parameter DEPTH bound to: 65536 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/realtime/clk_wiz_0_stub.vhdl:14]
+INFO: [Synth 8-638] synthesizing module 'ov7670_controller' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/ov7670_controller.v:2]
+INFO: [Synth 8-638] synthesizing module 'ov7670_registers' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/ov7670_registers.v:3]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_registers' (1#1) [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/ov7670_registers.v:3]
+INFO: [Synth 8-638] synthesizing module 'i2c_sender' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/i2c_sender.v:5]
+INFO: [Synth 8-256] done synthesizing module 'i2c_sender' (2#1) [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/i2c_sender.v:5]
+INFO: [Synth 8-256] done synthesizing module 'ov7670_controller' (3#1) [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/ov7670_controller.v:2]
+INFO: [Synth 8-638] synthesizing module 'image_capture' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/image_capture.v:6]
+INFO: [Synth 8-256] done synthesizing module 'image_capture' (4#1) [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/image_capture.v:6]
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/vga.v:2]
+	Parameter H_PULSE_WIDTH bound to: 96 - type: integer 
+	Parameter H_FRONT_PORCH bound to: 16 - type: integer 
+	Parameter H_BACK_PORCH bound to: 48 - type: integer 
+	Parameter H_SYNC_PULSE bound to: 800 - type: integer 
+	Parameter H_DISPLAY_TIME bound to: 640 - type: integer 
+	Parameter V_PULSE_WIDTH bound to: 2 - type: integer 
+	Parameter V_FRONT_PORCH bound to: 10 - type: integer 
+	Parameter V_BACK_PORCH bound to: 29 - type: integer 
+	Parameter V_SYNC_PULSE bound to: 521 - type: integer 
+	Parameter V_DISPLAY_TIME bound to: 480 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vga' (5#1) [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/vga.v:2]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/realtime/blk_mem_gen_0_stub.vhdl:18]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/realtime/blk_mem_gen_1_stub.vhdl:18]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_2' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/realtime/blk_mem_gen_2_stub.vhdl:18]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_3' [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/realtime/blk_mem_gen_3_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (6#1) [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/datapath.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 428.656 ; gain = 156.805
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 428.656 ; gain = 156.805
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_3'
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp5/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_3'
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp6/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_2'
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp6/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_2'
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp7/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_0'
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp7/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_0'
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp8/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_clk_wiz'
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp8/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_clk_wiz'
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp9/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_1'
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp9/blk_mem_gen_1_in_context.xdc] for cell 'u_blk_mem_gen_1'
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'OV7670_PCLK_IBUF'. [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'btn'. [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc:195]
+WARNING: [Vivado 12-584] No ports matched 'btn'. [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc:196]
+WARNING: [Vivado 12-507] No nets matched 'cap_pclk_IBUF'. [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc:724]
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/datapath_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/constrain/Nexys-4-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/datapath_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/datapath_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 782.188 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 782.188 ; gain = 510.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 782.188 ; gain = 510.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100. (constraint file  C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp8/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100. (constraint file  C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/.Xil/Vivado-15020-D111-D45876/dcp8/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for clk_wiz_0_clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_blk_mem_gen_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_blk_mem_gen_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_blk_mem_gen_3. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 782.188 ; gain = 510.336
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/ov7670_registers.v:14]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/i2c_sender.v:78]
+WARNING: [Synth 8-6014] Unused sequential element addr_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/image_capture.v:38]
+INFO: [Synth 8-5546] ROM "vcnt1" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element vcnt_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/vga.v:59]
+INFO: [Synth 8-5546] ROM "vcnt1" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 782.188 ; gain = 510.336
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 3     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module datapath 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module ov7670_registers 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+Module i2c_sender 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+Module ov7670_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module image_capture 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element u_ov7670_controller/u_reg/cnt_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/ov7670_registers.v:14]
+WARNING: [Synth 8-6014] Unused sequential element u_ov7670_controller/u_i2c/cnt_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/i2c_sender.v:78]
+WARNING: [Synth 8-6014] Unused sequential element u_image_capture/addr_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/image_capture.v:38]
+WARNING: [Synth 8-6014] Unused sequential element u_vga/vcnt_reg was removed.  [C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/dut/vga.v:59]
+WARNING: [Synth 8-3917] design datapath has port ov7670_rst driven by constant 1
+WARNING: [Synth 8-3917] design datapath has port pwdn driven by constant 0
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ov7670_controller/u_i2c/data_sr_reg[0] )
+INFO: [Synth 8-3886] merging instance 'u_image_capture/d_latch_reg[9]' (FDR) to 'u_image_capture/dout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_image_capture/d_latch_reg[10]' (FDR) to 'u_image_capture/dout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_image_capture/d_latch_reg[12]' (FDR) to 'u_image_capture/dout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_image_capture/d_latch_reg[15]' (FDR) to 'u_image_capture/dout_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_image_capture/d_latch_reg[11]' (FDR) to 'u_image_capture/dout_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (u_ov7670_controller/u_i2c/data_sr_reg[0]) is unused and will be removed from module datapath.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 782.188 ; gain = 510.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+-----------------------------------+---------------+----------------+
+|Module Name      | RTL Object                        | Depth x Width | Implemented As | 
++-----------------+-----------------------------------+---------------+----------------+
+|ov7670_registers | command                           | 256x16        | LUT            | 
+|datapath         | u_ov7670_controller/u_reg/command | 256x16        | LUT            | 
++-----------------+-----------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_0_clk_wiz/ov7670_clk50' to pin 'clk_wiz_0_clk_wiz/bbstub_ov7670_clk50/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_0_clk_wiz/vga_clk25' to pin 'clk_wiz_0_clk_wiz/bbstub_vga_clk25/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 782.188 ; gain = 510.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 787.461 ; gain = 515.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |blk_mem_gen_0 |         1|
+|3     |blk_mem_gen_1 |         1|
+|4     |blk_mem_gen_2 |         1|
+|5     |blk_mem_gen_3 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |blk_mem_gen_0_bbox_1 |     1|
+|2     |blk_mem_gen_1_bbox_2 |     1|
+|3     |blk_mem_gen_2_bbox_3 |     1|
+|4     |blk_mem_gen_3_bbox_4 |     1|
+|5     |clk_wiz_0_bbox_0     |     1|
+|6     |BUFG                 |     1|
+|7     |CARRY4               |    21|
+|8     |LUT1                 |     7|
+|9     |LUT2                 |   130|
+|10    |LUT3                 |    30|
+|11    |LUT4                 |    42|
+|12    |LUT5                 |    32|
+|13    |LUT6                 |    68|
+|14    |FDCE                 |   146|
+|15    |FDPE                 |    31|
+|16    |FDRE                 |    43|
+|17    |FDSE                 |     1|
+|18    |IBUF                 |    13|
+|19    |OBUF                 |    19|
+|20    |OBUFT                |     1|
++------+---------------------+------+
+
+Report Instance Areas: 
++------+----------------------+------------------+------+
+|      |Instance              |Module            |Cells |
++------+----------------------+------------------+------+
+|1     |top                   |                  |   635|
+|2     |  u_image_capture     |image_capture     |    50|
+|3     |  u_ov7670_controller |ov7670_controller |   219|
+|4     |    u_i2c             |i2c_sender        |   102|
+|5     |    u_reg             |ov7670_registers  |   115|
+|6     |  u_vga               |vga               |   282|
++------+----------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 803.648 ; gain = 531.797
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 803.648 ; gain = 178.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 803.648 ; gain = 531.797
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 803.648 ; gain = 543.262
+INFO: [Common 17-1381] The checkpoint 'C:/Users/yangxia/Desktop/XY/Projects/UHCL2017-2018/soc_datapath/soc_scalable/syn1/project_1/project_1.runs/synth_1/datapath.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file datapath_utilization_synth.rpt -pb datapath_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 803.648 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 12:09:43 2018...
